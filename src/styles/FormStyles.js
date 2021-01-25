@@ -1,8 +1,8 @@
 const styles = theme => ({
   main: {
     display: 'block',
-    marginLeft: theme.spacing.unit * 3,
-    marginRight: theme.spacing.unit * 3,
+    marginLeft: theme.spacing(3),
+    marginRight: theme.spacing(3),
     width: 'auto',
     [theme.breakpoints.up('sm')]: {
       marginLeft: 'auto',
@@ -14,19 +14,19 @@ const styles = theme => ({
     alignItems: 'center',
     display: 'flex',
     flexDirection: 'column',
-    marginTop: theme.spacing.unit * 8,
-    padding: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 3}px ${theme.spacing.unit * 3}px`
+    marginTop: theme.spacing(1) * 8,
+    padding: `${theme.spacing(2)}px ${theme.spacing(3)}px ${theme.spacing(3)}px`
   },
   avatar: {
     backgroundColor: theme.palette.secondary.main,
-    margin: theme.spacing.unit
+    margin: theme.spacing(1)
   },
   form: {
-    marginTop: theme.spacing.unit * 3,
+    marginTop: theme.spacing(3),
     width: '100%'
   },
   submit: {
-    marginTop: theme.spacing.unit * 3
+    marginTop: theme.spacing(3)
   }
 });
 
