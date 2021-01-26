@@ -14,6 +14,7 @@ import Select from '@material-ui/core/Select';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './styles/FormStyles'
 import {LanguageContext} from './contexts/LanguageContext';
+import {ThemeContext} from './contexts/ThemeContext';
 
 const words = {
   english: {
@@ -38,12 +39,13 @@ const words = {
 
 function Form(props) {
   const { language, changeLanguage } = useContext(LanguageContext);
+  const { isDarkMode } = useContext(ThemeContext);
   const { email, signIn, password, remember } = words[language];
   const { classes } = props;
 
   return (
       <main className={classes.main}>
-        <Paper className={classes.paper}>
+        <Paper className={classes.paper} style={{backgroundColor: isDarkMode ? 'default' : '#f5f4f4'}}>
           <Avatar className={classes.avatar}>
             <LockOutlinedIcon/>
           </Avatar>
